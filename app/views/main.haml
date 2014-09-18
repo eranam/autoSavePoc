@@ -1,0 +1,20 @@
+.my-container{'ng-controller' => "ListController as listCtrl", 'ng-init' => "listCtrl.init()"}
+  .display{'ng-if' => "!edit.id"}
+    %h1 AutoSave P.O.C
+    %ul
+      %li{'ng-repeat' => "postObj in listCtrl.posts"}
+        %div.online
+          %h3 {{postObj.post.title}}
+          %sapn from: {{postObj.post.lastSave | date:'medium' }}
+          %button{'ng-click' => "listCtrl.goToUpdate(postObj)"} edit
+        %p {{postObj.post.body}}
+  .edit{'ng-if' => "edit.id"}
+    %h2 Edit Post:
+    %div
+      %lable{:for => "title"} Title:
+      %input{:type => "text", :name => "title", "value" => "edit.post.title", "ng-model" => "edit.post.title"}
+    %div
+      %textarea{:name => "content", "value" => "edit.post.body", "ng-model" => "edit.post.body"}
+    %button{'ng-click' => "listCtrl.closeEdit()"} Close
+  .save-counter Total saves: {{listCtrl.saveCounter}}
+  .saving-anim{'ng-show' => "listCtrl.savingAnimation()"} saving...

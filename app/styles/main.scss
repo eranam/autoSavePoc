@@ -1,0 +1,54 @@
+$font-helvetica45: "HelveticaNeueW01-45Ligh", "HelveticaNeueW02-45Ligh", "HelveticaNeueW10-45Ligh", sans-serif;
+$font-helvetica55: "HelveticaNeueW01-55Roma", "HelveticaNeueW02-55Roma", "HelveticaNeueW10-55Roma", sans-serif;
+$font-helvetica65: "HelveticaNeueW01-65Medi", "HelveticaNeueW02-65Medi", "HelveticaNeueW10-65Medi", sans-serif;
+$font-helvetica75: "HelveticaNeueW01-75Bold", "HelveticaNeueW02-75Bold", "HelveticaNeueW10-75Bold", sans-serif;
+
+.my-container {
+  width: 800px;
+  margin: 0 auto;
+
+  .display {
+    margin: 0 auto;
+    top: 10px;
+    width: 550px;
+    ul {
+      list-style-type: none;
+    }
+  }
+  .edit {
+    width: 550px;
+    margin: 0 auto;
+    input {
+      margin: 10px;
+      width: 300px;
+    }
+    textarea {
+      margin: 10px;
+      width: 350px;
+      height: 200px;
+    };
+
+  }
+}
+
+.online {
+  display: inline-block;
+  width: 700px;
+  h3, span, button {
+    margin: auto 30px;
+  }
+  h3 {
+    margin-left: 0;
+    float: left;
+  }
+  span {
+    float: right;
+  }
+}
+
+h1 {
+  font-family: $font-helvetica75;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
